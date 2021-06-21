@@ -210,7 +210,7 @@ body {
   border-radius: 13px;
 }
 
-.background{
+.background {
   position: absolute;
   height: 200px;
   width: 100%;
@@ -294,6 +294,15 @@ body {
   }
   .email__input {
     width: 320px;
+  }
+  .quote__image__text {
+    font-size: 32px;
+  }
+  .quote__image {
+    height: 300px;
+  }
+  .background {
+    height: 300px;
   }
 }
 
