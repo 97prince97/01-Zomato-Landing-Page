@@ -59,16 +59,22 @@ body {
     #dd2476 51%,
     #ff512f 100%
   );
-  color: #fff;
   border: none;
+  color: #fff;
   padding: 12px;
   border-radius: 6px;
   cursor: pointer;
   margin: 7px;
 }
 
-.nav__item:hover {
-  border: 2px solid blue;
+.button__primary:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+button {
+  border: none;
 }
 
 .hero__image__container {
@@ -229,6 +235,35 @@ body {
   margin: 0 16px;
 }
 
+footer {
+  background-image: linear-gradient(
+    to right,
+    #ff512f 0%,
+    #dd2476 51%,
+    #ff512f 100%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border-radius: 16px 16px 0 0;
+}
+
+footer > img {
+  width: 300px;
+  filter: brightness(0) invert(1);
+}
+footer > ul {
+  list-style-type: none;
+  font: 16px;
+  margin-top: -1rem;
+}
+
+footer > ul > li {
+  margin: 5px 0;
+}
+
 @media (min-width: 768px) {
   .navbar {
     justify-content: space-between;
@@ -303,6 +338,12 @@ body {
   }
   .background {
     height: 300px;
+  }
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 112px;
   }
 }
 
