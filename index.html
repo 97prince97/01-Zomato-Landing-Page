@@ -21,9 +21,30 @@
           <img src="assets/logo.png" alt="logo" class="navbar__logo" />
         </div>
         <div class="navbar__nav__items">
-          <button class="nav__item button__primary">Order Food</button>
+          <button class="nav__item button__primary hide__mobile">
+            Order Food
+          </button>
+          <button
+            class="button__primary hamburger__menu mobile__only"
+            id="hamburgermenu"
+          >
+            <div></div>
+            <div></div>
+            <div></div>
+          </button>
         </div>
       </nav>
+      <div class="mobile__navbar__items mobile__only hamburger__menu__close">
+        <ul>
+          <li>Products</li>
+          <li>Restaurants</li>
+          <li>Pricing</li>
+          <li>About Us</li>
+        </ul>
+        <div class="nav__items">
+          <button class="button__primary">Order Food</button>
+        </div>
+      </div>
     </header>
 
     <main class="container">
@@ -166,15 +187,30 @@
 
     <!-- footer -->
 
-   <footer>
-     <img src="./assets/logo.png" alt="logo">
-     <ul>
-       <li>Pricing</li>
-       <li>Terms and condition</li>
-       <li>Partnership</li>
-       <li>Career</li>
-       <li>Contact</li>
-     </ul>
-   </footer>
+    <footer>
+      <img src="./assets/logo.png" alt="logo" />
+      <ul>
+        <li>Pricing</li>
+        <li>Terms and condition</li>
+        <li>Partnership</li>
+        <li>Career</li>
+        <li>Contact</li>
+      </ul>
+    </footer>
+
+    <!-- Javascript code -->
+
+    <script>
+      const hamburgermenu = document.getElementById("hamburgermenu");
+      const mobileNavDropDown = document.querySelector(
+        ".mobile__navbar__items"
+      );
+      window.addEventListener("click", () => {
+        if (mobileNavDropDown.classList.contains("hamburger__menu__close"))
+          return mobileNavDropDown.classList.remove("hamburger__menu__close");
+        return mobileNavDropDown.classList.add("hamburger__menu__close");
+      });
+    </script>
+    
   </body>
 </html>

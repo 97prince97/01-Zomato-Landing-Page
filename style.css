@@ -9,6 +9,14 @@ body {
   background-color: #ebf2ff;
 }
 
+ul {
+  list-style-type: none;
+}
+
+button {
+  border: none;
+}
+
 .button__primary {
   background-image: linear-gradient(
     to right,
@@ -31,6 +39,17 @@ body {
   cursor: pointer;
 }
 
+.hamburger__menu > div {
+  width: 35px;
+  height: 5px;
+  background-color: #f9fafc;
+  margin: 6px 0;
+}
+
+.hamburger__menu__close {
+  display: none !important;
+}
+
 .container {
   max-width: 100%;
   padding: 0 20px;
@@ -38,10 +57,14 @@ body {
 }
 
 .navbar {
+  position: sticky;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 5rem;
   background-color: #fff;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 10%), 0 4px 6px -2px rgb(0 0 0 / 5%);
+  z-index: 9999;
 }
 
 .navbar__brand {
@@ -67,14 +90,30 @@ body {
   margin: 7px;
 }
 
+.mobile__navbar__items {
+  background-color: #fff;
+  padding: 1rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  z-index: 9999;
+}
+
+.mobile__navbar__items > ul > li {
+  margin: 20px 0;
+}
+
 .button__primary:hover {
   background-position: right center; /* change the direction of the change here */
   color: #fff;
   text-decoration: none;
 }
 
-button {
-  border: none;
+.hide__mobile {
+  display: none !important;
+} 
+
+.hero__container {
+  margin-top: 20px;
 }
 
 .hero__image__container {
@@ -269,6 +308,12 @@ footer > ul > li {
     justify-content: space-between;
     padding: 2px 30px;
   }
+  .mobile__only {
+    display: none !important;
+  }
+  .hide__mobile {
+    display: block !important;
+  }
   .hero__container {
     margin-top: 20px;
     display: flex;
@@ -355,7 +400,7 @@ footer > ul > li {
     width: 150px;
   }
   .button__primary {
-    padding: 20px;
+    padding: 16px;
     font-size: 20px;
   }
   .hero__description {
